@@ -17,7 +17,7 @@ body{
     width:400px;
     height:500px;
     perspective: 1500px;
-    background-color: #ddd;
+    background-color: #f2f2f2;
     border:1px solid #aaa;
     overflow: hidden;
 }
@@ -27,13 +27,36 @@ body{
     height:100%;
     background: white;
     border: 1px solid #ccc;
-    box-shadow:0 4px 6px rgba(0,0,0,0.2);
+   
     transform-origin:left;
     backface-visibility:hidden;
     transition:transform 1s ease, z-index 0.5s ease;
 }
+
+/*Add a gradient to simulate the curl effect*/
+.page::before{
+    content: '';
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: linear-gradient(to right,rgba(248, 247, 247, 0.897)),transparent;
+    pointer-events: none;
+    z-index:1
+}
+/*add the gradient to simulate the back side of the page*/
+.page::after{
+    content: '';
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: linear-gradient(to right,transparent,rgb(240, 237, 237));
+    backface-visibility: hidden;
+    z-index:-1
+
+}
+
 .page:nth-child(even){
-    background-color:red;
+    background-color:#faf5f5
 }
 /*deffault state of the page*/
 .page{
@@ -41,7 +64,7 @@ body{
 }
 /*fliped state of the prev pages*/
 .page .flipped{
-    transform: rotateY(-180deg);
+    transform: rotateX(180deg);
 }
 #btn{
     margin:25px
@@ -52,4 +75,28 @@ button{
     padding:10px 20px;
     cursor:pointer;
     font-size:16px
+}
+.text{
+    position:absolute;
+    right:2px;
+    margin: 3px 6px;
+}
+
+#textArea{
+    width:300px;
+    height:500px;
+    border:none;
+    border:1px solid purple;
+    
+
+}
+.text button{
+    width:100px;
+    height:30px;
+    border:none;
+    border-radius:5px;
+    background-color: purple;
+    color:white;
+    padding:2px
+
 }

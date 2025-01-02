@@ -1,0 +1,10 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#textArea{
+    width:600px;
+    height:800px;
+}
