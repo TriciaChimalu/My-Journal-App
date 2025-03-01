@@ -7,21 +7,23 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
+    background-color: #999;
 
 }
 html{
     text-align: center;
+    font-size:62.5%
     
 }
 
 .container{
-    width:40%;
-    height:600px;
+    width:36%;
+    height:800px;
     border:none;
-    background:gold;
+    background:linear-gradient(to top left,#753682 0%,#bf2e34 100% );
     border: 2px solid black;
     margin-top:25px;
-    box-shadow: 5px 5px blue,10px 10px red,15px 15px green
+    box-shadow: 5px 5px #6A0DAD,10px 10px #FFF,15px 15px #B57EDC;
 }
 
 .container h3{
@@ -30,12 +32,17 @@ html{
     
 }
 .conatiner p{
-    font-size:3rem
+    font-size:5rem;
+    margin-top:20rem;
+    color:black
 }
-.container button{
-    width:200px;
-    height:50px;
-    margin:100px 80px;
-    border:0;
-    border-radius: 5px;
+
+.primary-link:link{
+    text-decoration: none;
+    font-size:4rem;
+    margin-top:20rem
+
+
+
+
 }

@@ -2,31 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Journal</title>
+    <meta name="viewport" content="width=y, initial-scale=1.0">
+    <title>Tricia's Journal</title>
     <link rel="stylesheet" href="mainpage.css">
 </head>
 <body>
-    <!--<div id="layout-container" style="opacity: 1; width: 826px; height: 230046px; top: 45px; transform: scale(1) translate(95px, 0px);"><div class="pagerect" id="pagediv_0" style="left: 5px; top: 3px; width: 816px; height: 1056px;"></div><div class="pagerect" id="pagediv_1" style="left: 5px; top: 1073px; width: 816px; height: 1056px;"></div><div class="pagerect" id="pagediv_2" style="left: 5px; top: 2143px; width: 816px; height: 1056px;"></div><div class="pagerect" id="pagediv_3" style="left: 5px; top: 3213px; width: 816px; height: 1056px;"></div><div class="pagerect" id="pagediv_4" style="left: 5px; top: 4283px; width: 816px; height: 1056px;"></div><div class="pagerect" id="pagediv_5" style="left: 5px; top: 5353px; width: 816px; height: 1056px;"></div>
-        <div id="time"></div>
-        <input type="text" class="text">
-    </div>---->
-    <div class="book">
-        <div class="page" id="page1">1</div>
-         <div class="page" id="page2">2</div>
-        <div class="page" id="page3">3</div>
-        <div class="page" id="page4">4</div>
-        <div class="page" id="page4">5</div>
-        
+<div id="journal-container">
+    <div class="active-page">
+        <textarea name="" id="textarea-box" placeholder="please include date">
+            
+        </textarea>
     </div>
-    <div id="btn">  <button id="prevPage"><</button>
-    <button id="nextPage">></button></div>
-    <div class="text">
-        <textarea name="" id="textArea"></textarea><br>
-        
-        <button id="textarea-btn">Save</button>
-    </div>
-  
-    <script src="script.js"></script>
+     <button class="btn btn-prev"><svg xmlns="http://www.w3.org/2000/svg" 
+        class="btn-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+      </svg>
+      </button>
+      <button class="btn btn-next"><svg xmlns="http://www.w3.org/2000/svg"  class="btn-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+      </svg></button>
+</div>
 </body>
 </html>
