@@ -1,51 +1,48 @@
-const pages = document.querySelectorAll('.page');
-const prevButton = document.getElementById('prevPage');
-const nextButton = document.getElementById('nextPage');
-let saveButtton =document.getElementById('textarea-btn');
-let currentPage = 0;
 
 
+let currentPage = localStorage.getItem('currentPage') || 1;
+ let journalText = document.getElementById('journal-text');
+ 
+ //function to ensure data isn't overwritten when page reloads
+document.addEventListener('click',function(){
+    loadPage(currentPage)
+})
 
-saveButtton.addEventListener('click',inputMessage);
-
-function  inputMessage(){
-    
-    let inputMessage = document.getElementById('textArea').value;
-    let messageDiv  = document.createElement('div');
-    messageDiv.textContent = inputMessage;
-    pages.appendChild(messageDiv)
+ function loadPage(page){
+    let savedText = localStorage.getItem(`page_${page}`) || ' ';
+    document.getElementById('journal-text').value = savedText;
+    localStorage.setItem('currentPage',page); 
 }
 
-function showPage(){
-    pages.forEach((page,index) => {
-        
-        if(index <= currentPage){
-    
-            page.classList.add('flipped');
-            page.style.zIndex = index ;
+// function saveCurrent(){
+//     let text = journalText.value;
+//     localStorage.setItem(`page_${currentPage}`,text)
+// }
 
-        }
-    else{
-        page.classList.remove('flipped');
-        page.style.zIndex = pages.length - index;
-    }
-    //console.log(`page ${index + 1} flipped`);
-   
+document.getElementById('save-btn').addEventListener('click',function(){
+    let text = document.getElementById('journal-text').value;
+    localStorage.setItem(`page_${currentPage}`,text);
+    alert('saved');
 });
-}
 
-nextButton.addEventListener('click',() =>{
-    if(currentPage < pages.length - 1){
-        currentPage++;
-        showPage()
-    }
-});
-prevButton.addEventListener('click', () =>{
+
+
+document.querySelector('.next-btn').addEventListener('click', () => {
+    console.log('clicked')
+    localStorage.setItem(`page_${currentPage}`,document.getElementById('journal-text').value);
+    currentPage++;
+    saveCurrent();
+    loadPage(currentPage);
     
-    if(currentPage > 0){
+
+})
+document.querySelector('.prev-btn').addEventListener('click',() =>{
+    if(currentPage > 1){
+        localStorage.setItem(`page_${currentPage}`,document.getElementById('journal-text').value);
+
         currentPage--;
-        showPage()
+        saveCurrent
+        loadPage(currentPage);   
+
     }
-
-});
-
+})

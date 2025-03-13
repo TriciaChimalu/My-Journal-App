@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 body{
-    font-family: system-ui,sans-serif;
+    font-family:"Patrick Hand";
+    font-weight:400;
+    font-size:3.6rem;
     font-size:81.25%;
     background-color:#faa2c1;
     color:#101010;
@@ -21,39 +23,40 @@ body{
      justify-content: center;
      align-items: center;
      gap:30px;
-    
-
+     margin-bottom:20px ;
     
 }
 
-.active-page{
-    width:720px;
-    height: 888px;
+.journal-textbox-container{
+    width:600px;
+    height: 800px;
 
     background-color:#fff;
     border:none;
     position: relative;
     border-radius: 0 5px 0px 5px;
-    box-shadow: 0 12px 24px rgba(0,0,0.2)
+    box-shadow: 0 12px 24px rgba(0,0,0.2);
+  
    
 }
-#textarea-box{
-    font-size:20px;
+#journal-text{
+    font-family: "Dancing script";
+    font-size:25px;
     padding:20px;
-    width:717px;
-    height:888px;
+    width:600px;
+    height:750px;
 
     border:0 none #fff;
     overflow:hidden;
     outline:none;
 }
-#textarea-box:focus{
+#journal-text:focus{
     border:0 none #fff;
     overflow:hidden;
     outline:none;
     padding:15px;
     text-indent: 13px;
-    font-size:22px;
+    font-size:18px;
     line-height:1.5;
 
 
@@ -66,24 +69,44 @@ body{
    width:40px;
    position:absolute;
    border-radius:50%;
-
    display:flex;
    align-items: center;
    justify-content: center;
+}
+.btn:hover{
+    background-color: #eb145f;
+}
+.btn-box{
+    width:30px;
+    height:30px;
+    border:2px solid #fff;
+    border-radius: 50%;
 }
 .btn-icon{
     height:24px;
     width:24px;
     stroke:red
 }
-.btn-prev{
+.btn-icon:hover{
+    stroke:#fff
+}
+.prev-btn{
     left:518px;
     top:45.5%;
-    transform:translate(120%,-50%)
+    transform:translate(-650%,-50%)
 
 }
-.btn-next{
+.next-btn{
     right:500px;
     top:50%;
-    transform:translate(-70px,-50px)
+    transform:translate(240px,-98%)
+}
+#save-btn{
+    width:6rem;
+    height:3rem;
+    border:0;
+    border-radius: 10px;
+    background-color: #753682;
+    color:white;
+
 }

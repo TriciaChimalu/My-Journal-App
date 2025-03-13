@@ -2,25 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=y, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tricia's Journal</title>
     <link rel="stylesheet" href="mainpage.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    
+
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Work+Sans:wght@400;500;600;700&amp;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div id="journal-container">
-    <div class="active-page">
-        <textarea name="" id="textarea-box" placeholder="please include date">
+    <div class="journal-textbox-container">
+        <textarea name="" id="journal-text" placeholder="please include date" rows="10" cols="50">
             
         </textarea>
     </div>
-     <button class="btn btn-prev"><svg xmlns="http://www.w3.org/2000/svg" 
+     <button class="btn prev-btn"><svg xmlns="http://www.w3.org/2000/svg" 
         class="btn-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
       </svg>
       </button>
-      <button class="btn btn-next"><svg xmlns="http://www.w3.org/2000/svg"  class="btn-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <button class="btn next-btn"><svg xmlns="http://www.w3.org/2000/svg"  class="btn-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
       </svg></button>
+      <button id="save-btn">Save</button>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
